@@ -38,12 +38,6 @@ const (
 	// eventRecorderNameTemplate is the template used to format event recorder name for a scheduler framework.
 	eventRecorderNameTemplate = "scheduler-framework-%s"
 
-	// The reasons to use for scheduling decisions.
-	pickedByPolicyReason                   = "picked by scheduling policy"
-	pickFixedInvalidClusterReasonTemplate  = "Cluster \"%s\" is not eligible for resource placement yet: %s"
-	pickFixedNotFoundClusterReasonTemplate = "Specified cluster \"%s\" is not found"
-	notPickedByScoreReasonTemplate         = "Cluster \"%s\" does not score high enough (affinity score: %d, topology spread score: %d)"
-
 	// FullyScheduledReason is the reason string of placement condition when the placement is scheduled.
 	FullyScheduledReason = "SchedulingPolicyFulfilled"
 	// NotFullyScheduledReason is the reason string of placement condition when the placement policy cannot be fully satisfied.

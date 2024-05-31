@@ -22,6 +22,12 @@ import (
 )
 
 const (
+	// The reasons to use for scheduling decisions.
+	pickedByPolicyReason                   = "picked by scheduling policy"
+	pickFixedInvalidClusterReasonTemplate  = "Cluster \"%s\" is not eligible for resource placement yet: %s"
+	pickFixedNotFoundClusterReasonTemplate = "Specified cluster \"%s\" is not found"
+	notPickedByScoreReasonTemplate         = "Cluster \"%s\" does not score high enough (affinity score: %d, topology spread score: %d)"
+
 	// ClusterDecision schedule message templates.
 	resourceScheduleSucceededMessageFormat          = "Successfully scheduled resources for placement in \"%s\": %s"
 	resourceScheduleSucceededWithScoreMessageFormat = "Successfully scheduled resources for placement in \"%s\" (affinity score: %d, topology spread score: %d): %s"
