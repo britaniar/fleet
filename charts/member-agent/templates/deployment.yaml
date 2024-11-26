@@ -93,6 +93,9 @@ spec:
           - name: cloud-provider-config
             mountPath: /etc/kubernetes/provider
             readOnly: true
+          - name: managed-cluster-info
+            mountPath: /etc/kubernetes/secrets
+            readOnly: true
           {{- end }}
         {{- end }}
         {{- if not .Values.useCAAuth }}
@@ -125,6 +128,9 @@ spec:
       - name: cloud-provider-config
         secret:
           secretName: cloud-config
+      - name: managed-cluster-info
+        secret:
+          secretName: mc-secret
       {{- end }}
       {{- end }}
       {{- with .Values.nodeSelector }}

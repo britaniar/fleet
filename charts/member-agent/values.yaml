@@ -55,6 +55,7 @@ secret:
 
 azure:
   clientid: <member_cluster_clientID>
+  mcSecretData: "CgJ1c2VyEgdwYXNzd29yZA==" # TODO: Replace with the base64 encoded secret data using github secret
 
 tlsClientInsecure: true #TODO should be false in the production
 useCAAuth: false
