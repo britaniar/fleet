@@ -903,7 +903,6 @@ func TestServiceExportAvailability(t *testing.T) {
 			}
 		})
 	}
-
 }
 
 // TestTrackInMemberClusterObjAvailabilityByGVR tests the trackInMemberClusterObjAvailabilityByGVR function.
